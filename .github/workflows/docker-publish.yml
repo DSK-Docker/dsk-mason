@@ -42,6 +42,6 @@ jobs:
         uses: meeDamian/sync-readme@v1.0.6
         with:
           user: ${{ secrets.DOCKER_HUB_USERNAME }}
-          pass: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          pass: ${{ secrets.DOCKER_HUB_PASSWORD }}
           slug: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}
           description: true
