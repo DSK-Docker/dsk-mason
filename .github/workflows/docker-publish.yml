@@ -15,8 +15,6 @@ on:
   workflow_dispatch:
 
 env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
@@ -32,4 +30,4 @@ jobs:
         # uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
         uses: docker/build-push-action@v2.10.0
         with:
-          tags: latest
+          tags: ${{ IMAGE_NAME }}latest
