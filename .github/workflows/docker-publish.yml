@@ -20,12 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: show REPO
-        run: echo "The value of REPO is: ${GITHUB_REPOSITORY}"
-        
       - name: Setup repository name
         run: |
-          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+          echo "REPO=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
       - name: Build and push Docker images
         # You may pin to the exact commit or the version.
         # uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
