@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-build-and-push:
+  test-build-and-publish:
     uses: DSK-Docker/workflows/.github/workflows/main.yml@master
     secrets:
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
