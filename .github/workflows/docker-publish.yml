@@ -1,4 +1,4 @@
-name: docker-test-and-build
+name: docker-test-build-and-push
 
 on:
   push:
@@ -8,5 +8,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow-in-another-repo:
+  test-build-and-push:
     uses: DSK-Docker/workflows/.github/workflows/main.yml@master
+    secrets:
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
