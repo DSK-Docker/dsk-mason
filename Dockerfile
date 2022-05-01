@@ -1,4 +1,4 @@
-FROM jackiig/html-mason:latest
+FROM jackiig/html-mason:20180423
 
 LABEL maintainer "Dschinghis Kahn"
 
