@@ -1,1 +1,0 @@
-docker run --detach --name test_subject ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:latest
