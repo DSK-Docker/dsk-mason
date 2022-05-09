@@ -1,2 +1,0 @@
-docker stop test_subject
-docker rm test_subject
