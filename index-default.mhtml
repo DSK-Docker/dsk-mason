@@ -1,0 +1,10 @@
+<%perl>
+	my $var = "World";
+</%perl>
+<html>
+	<body>
+		<h1>
+			Hello, <% $var %>!
+		</h1>
+	</body>
+</html>
