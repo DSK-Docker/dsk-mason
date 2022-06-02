@@ -1,5 +1,13 @@
 # Description
-Docker image for the jackiig html-mason web server.
+Docker image for apache and mason.
 
 # Usage
-See https://hub.docker.com/r/jackiig/html-mason
+```Docker
+docker create \
+  --name=mason \
+  -e TIMEZONE=<<TIMEZONE|default(UTC)>> \
+  -p 80:80 \
+  -v path to website:/mnt/site \
+  --restart unless-stopped \
+  dschinghiskahn/mason
+```
