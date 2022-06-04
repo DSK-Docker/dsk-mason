@@ -1,8 +1,6 @@
 #! /bin/sh
 
-test -d /mnt/site/htdocs || mkdir /mnt/site/htdocs
-test -f /mnt/site/htdocs/index.mhtml || cp index-default.mhtml /mnt/site/htdocs/index.mhtml
-
-chown ${APACHE_RUN_USER}:${APACHE_RUN_GROUP} -R /mnt/site
+test -d /mnt/site/htdocs || { mkdir /mnt/site/htdocs ; chown ${APACHE_RUN_USER}:${APACHE_RUN_GROUP} /mnt/site/htdocs ; }
+test -f /mnt/site/htdocs/index.mhtml || { cp index-default.mhtml /mnt/site/htdocs/index.mhtml ; chown ${APACHE_RUN_USER}:${APACHE_RUN_GROUP} /mnt/site/htdocs/index.mhtml ; }
 
 /usr/sbin/apache2 -D FOREGROUND
